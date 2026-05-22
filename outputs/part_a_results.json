@@ -1,0 +1,52 @@
+{
+  "waveform": {
+    "true_range_m": 7.5,
+    "estimated_range_m": 7.5,
+    "absolute_error_cm": 0.0,
+    "figures": [
+      "/home/pg2a1/pc_fmcw_project_python/figures/part_a_01_waveform_phase.png",
+      "/home/pg2a1/pc_fmcw_project_python/figures/part_a_02_beat_spectrum.png"
+    ]
+  },
+  "communication": {
+    "min_ber": 0.0,
+    "figure": "/home/pg2a1/pc_fmcw_project_python/figures/part_a_03_dpsk_ber.png"
+  },
+  "sensing": {
+    "num_detections": 2,
+    "detections": [
+      [
+        100.0,
+        -20.078740157480315,
+        0.6041735695174067
+      ],
+      [
+        30.0,
+        12.047244094488185,
+        1.0
+      ]
+    ],
+    "figure": "/home/pg2a1/pc_fmcw_project_python/figures/part_a_04_range_doppler_cfar.png"
+  },
+  "tracking": {
+    "raw_points": 220,
+    "cleaned_points": 102,
+    "clutter_removed": 118,
+    "num_tracks": 2,
+    "mean_deviation_units": 0.877877264046975,
+    "figure": "/home/pg2a1/pc_fmcw_project_python/figures/part_a_05_mht_tracking.png"
+  },
+  "illumination": {
+    "shadow_centers_deg": [
+      -8,
+      10
+    ],
+    "figure": "/home/pg2a1/pc_fmcw_project_python/figures/part_a_06_adaptive_beam.png"
+  },
+  "performance": {
+    "range_resolution_cm": 1.5,
+    "rmse_at_20db_cm": 3.647958197389465,
+    "paper_target_cm": 3.8,
+    "figure": "/home/pg2a1/pc_fmcw_project_python/figures/part_a_07_ranging_performance.png"
+  }
+}

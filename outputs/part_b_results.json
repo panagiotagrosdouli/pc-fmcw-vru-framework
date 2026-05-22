@@ -1,0 +1,54 @@
+{
+  "data_source": "womd",
+  "dataset": {
+    "num_agents": 100,
+    "num_scenarios": 18,
+    "num_rows": 5320,
+    "source": "Waymo Open Motion Dataset validation subset"
+  },
+  "prediction_rows": [
+    [
+      0,
+      "pedestrian",
+      0.7393841199077226,
+      1.0586864926636894,
+      0.7291284564364277,
+      1.1846888474897361
+    ],
+    [
+      1,
+      "pedestrian",
+      1.7127527557046627,
+      2.863725343101266,
+      1.2332330079714278,
+      2.071701146130937
+    ],
+    [
+      2,
+      "cyclist",
+      0.23607127161181188,
+      0.5149722147379449,
+      0.6657491273995755,
+      1.1407489809329645
+    ],
+    [
+      3,
+      "cyclist",
+      2.1671424851793035,
+      4.676373978123131,
+      2.5009097752095664,
+      4.972806789970487
+    ]
+  ],
+  "prediction": {
+    "figure": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_02_prediction.png"
+  },
+  "predictive_beam": {
+    "reactive_glare_rate": 0.5049019607843137,
+    "predictive_glare_rate": 0.49019607843137253,
+    "relative_improvement_percent": 2.912621359223302,
+    "reactive_mean_angular_error_deg": 2.196786896912944,
+    "predictive_mean_angular_error_deg": 1.9066716146377292,
+    "figure": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_03_predictive_beam.png"
+  }
+}

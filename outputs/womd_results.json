@@ -1,0 +1,20 @@
+{
+  "prediction_metrics": {
+    "num_agents": 32,
+    "mean_cv_ade": 0.3305740010419903,
+    "mean_cv_fde": 0.6749758718798637,
+    "mean_kf_ade": 0.3460964813254336,
+    "mean_kf_fde": 0.6657261040280422,
+    "figure": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_04_womd_prediction.png"
+  },
+  "beam_metrics": {
+    "num_agents": 32,
+    "reactive_mean_angle_error_deg": 0.01432007447651213,
+    "predictive_mean_angle_error_deg": 0.00526907467989382,
+    "reactive_glare_rate": 0.0,
+    "predictive_glare_rate": 0.0,
+    "relative_glare_reduction_percent": 0.0,
+    "relative_angular_error_reduction_percent": 63.204977121200116,
+    "figure": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_05_womd_predictive_beam.png"
+  }
+}
