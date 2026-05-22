@@ -1,0 +1,26 @@
+{
+  "num_agents_allocated": 40,
+  "total_power_budget": 1.0,
+  "uniform_power_per_agent": 0.025,
+  "safety_weighted_power": 1.126017408612253,
+  "uniform_safety_power": 0.5630087043061265,
+  "safety_weighted_improvement_percent": 100.0,
+  "top_power_agent": {
+    "scenario_id": "4f7aa8ac2ff60093",
+    "agent_id": 3557,
+    "object_type": "pedestrian",
+    "priority_score": 0.631520831535603,
+    "minimum_distance_m": 0.5160184175519046,
+    "uncertainty": 9.013848328017085,
+    "crossing_intent": false,
+    "speed_mps": 0.47001987755754715,
+    "final_angle_deg": 0.5602876746142486,
+    "allocated_power": 0.05,
+    "uniform_power": 0.025,
+    "power_gain_over_uniform": 2.0
+  },
+  "figures": {
+    "allocation": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_23_energy_aware_allocation.png",
+    "priority_power_mapping": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_24_priority_power_mapping.png"
+  }
+}

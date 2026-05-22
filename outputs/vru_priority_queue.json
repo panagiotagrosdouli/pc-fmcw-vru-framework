@@ -1,0 +1,20 @@
+{
+  "num_agents": 157,
+  "highest_priority_agent": {
+    "scenario_id": "4f7aa8ac2ff60093",
+    "agent_id": 3557,
+    "object_type": "pedestrian",
+    "minimum_distance_m": 0.5160184175519046,
+    "uncertainty": 9.013848328017085,
+    "crossing_intent": false,
+    "speed_mps": 0.47001987755754715,
+    "final_angle_deg": 0.5602876746142486,
+    "priority_score": 0.631520831535603
+  },
+  "mean_priority": 0.5315162637103468,
+  "crossing_fraction": 0.0,
+  "figures": {
+    "priority_queue": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_21_vru_priority_queue.png",
+    "priority_vs_distance": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_22_priority_vs_distance.png"
+  }
+}

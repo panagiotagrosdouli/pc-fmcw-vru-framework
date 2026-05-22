@@ -1,0 +1,27 @@
+{
+  "predictor_summary": [
+    {
+      "predictor": "CV",
+      "ade": 0.7313378921035619,
+      "fde": 1.6189443192190642,
+      "angular_error_deg": 23.344303994053327,
+      "uncertainty": 2.0,
+      "timing_penalty_s": 82.6108280254777,
+      "iape": 69.39668767179792
+    },
+    {
+      "predictor": "KF",
+      "ade": 0.7995160522786962,
+      "fde": 1.6771518208273752,
+      "angular_error_deg": 25.819633690535962,
+      "uncertainty": 4.498942005599058,
+      "timing_penalty_s": 76.24904458598726,
+      "iape": 65.27799191768871
+    }
+  ],
+  "best_predictor": "KF",
+  "figures": {
+    "comparison": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_19_iape_comparison.png",
+    "distribution": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_20_iape_distribution.png"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "num_candidates": 157,
+  "num_selected_vrus": 8,
+  "num_merged_shadow_zones": 1,
+  "total_shadow_width_deg": 46.24512821301593,
+  "mean_selected_priority": 0.5937568628071502,
+  "merged_shadow_intervals": [
+    [
+      -19.14294429080676,
+      27.10218392220917
+    ]
+  ],
+  "figures": {
+    "shadow_profile": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_25_multi_vru_shadow_profile.png",
+    "selected_vrus": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_26_selected_shadow_vrus.png"
+  }
+}
