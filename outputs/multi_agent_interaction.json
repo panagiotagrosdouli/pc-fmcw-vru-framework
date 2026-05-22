@@ -1,0 +1,91 @@
+{
+  "num_interactions": 3578,
+  "mean_interaction_score": 0.43358201046310185,
+  "max_interaction_score": 0.9984422264460132,
+  "high_interaction_pairs": [
+    {
+      "scenario_id": "e9653159c09f5c72",
+      "agent_a": 4398,
+      "agent_b": 4416,
+      "min_distance": 0.0,
+      "direction_similarity": 0.9968844528920264,
+      "interaction_score": 0.9984422264460132
+    },
+    {
+      "scenario_id": "ef30c381751c832",
+      "agent_a": 3024,
+      "agent_b": 3035,
+      "min_distance": 0.0,
+      "direction_similarity": 0.9965687422246945,
+      "interaction_score": 0.9982843711123472
+    },
+    {
+      "scenario_id": "a2fd6176c7695739",
+      "agent_a": 3696,
+      "agent_b": 3713,
+      "min_distance": 0.0,
+      "direction_similarity": 0.9965344536590361,
+      "interaction_score": 0.9982672268295181
+    },
+    {
+      "scenario_id": "ee5e5fe91cd6c6e7",
+      "agent_a": 3043,
+      "agent_b": 3052,
+      "min_distance": 0.0,
+      "direction_similarity": 0.9963945541215142,
+      "interaction_score": 0.9981972770607571
+    },
+    {
+      "scenario_id": "ee5e5fe91cd6c6e7",
+      "agent_a": 3037,
+      "agent_b": 3046,
+      "min_distance": 0.0,
+      "direction_similarity": 0.9959717396835449,
+      "interaction_score": 0.9979858698417725
+    },
+    {
+      "scenario_id": "ee5e5fe91cd6c6e7",
+      "agent_a": 3043,
+      "agent_b": 3050,
+      "min_distance": 0.0,
+      "direction_similarity": 0.9956304380036644,
+      "interaction_score": 0.9978152190018321
+    },
+    {
+      "scenario_id": "e9653159c09f5c72",
+      "agent_a": 4373,
+      "agent_b": 4410,
+      "min_distance": 0.0,
+      "direction_similarity": 0.9954575138031038,
+      "interaction_score": 0.9977287569015518
+    },
+    {
+      "scenario_id": "ee5e5fe91cd6c6e7",
+      "agent_a": 3050,
+      "agent_b": 3052,
+      "min_distance": 0.0,
+      "direction_similarity": 0.9951997058557254,
+      "interaction_score": 0.9975998529278627
+    },
+    {
+      "scenario_id": "ef30c381751c832",
+      "agent_a": 3035,
+      "agent_b": 3037,
+      "min_distance": 0.0,
+      "direction_similarity": 0.9951508098138651,
+      "interaction_score": 0.9975754049069325
+    },
+    {
+      "scenario_id": "ee5e5fe91cd6c6e7",
+      "agent_a": 3051,
+      "agent_b": 3056,
+      "min_distance": 0.0,
+      "direction_similarity": 0.9949526219706313,
+      "interaction_score": 0.9974763109853156
+    }
+  ],
+  "figures": {
+    "distribution": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_44_interaction_distribution.png",
+    "proximity_relation": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_45_interaction_proximity.png"
+  }
+}

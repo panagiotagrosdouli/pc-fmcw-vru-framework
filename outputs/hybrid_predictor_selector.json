@@ -1,0 +1,17 @@
+{
+  "num_agents": 209,
+  "mean_cv_fde": 1.5217815880807428,
+  "mean_kf_fde": 1.60603922285078,
+  "mean_hybrid_fde": 1.498025767666842,
+  "mean_oracle_best_fde": 1.3573327504570398,
+  "hybrid_vs_cv_gain": 0.023755820413901094,
+  "hybrid_vs_kf_gain": 0.108013455183938,
+  "predictor_usage": {
+    "CV": 128,
+    "KF": 81
+  },
+  "figures": {
+    "usage": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_40_hybrid_predictor_usage.png",
+    "fde_distribution": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_41_hybrid_fde_distribution.png"
+  }
+}

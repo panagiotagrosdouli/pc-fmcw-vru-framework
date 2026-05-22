@@ -1,0 +1,11 @@
+{
+  "num_agents": 157,
+  "mean_raw_jitter": 0.23673479537725567,
+  "mean_smooth_jitter": 0.05280756038045272,
+  "mean_jitter_reduction_percent": -4.472330297681835,
+  "best_jitter_reduction_percent": 78.57221932599077,
+  "figures": {
+    "beam_smoothing": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_33_beam_smoothing_example.png",
+    "jitter_distribution": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_34_beam_jitter_distribution.png"
+  }
+}

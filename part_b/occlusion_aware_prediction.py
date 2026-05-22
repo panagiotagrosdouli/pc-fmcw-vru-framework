@@ -11,9 +11,10 @@ from common.plotting import savefig
 
 
 def normalize_track(g):
+
     g = g.sort_values("t").copy()
 
-    x0, y0 = g[["x", "y"]].iloc[0].values
+    x0, y0 = g[["x","y"]].iloc[0].values
 
     g["x"] -= x0
     g["y"] -= y0
@@ -21,44 +22,60 @@ def normalize_track(g):
     return g
 
 
-def simulate_occlusion(g,
-                       start_idx=10,
-                       duration=8):
+def angle_deg(x, y):
 
-    g = g.copy()
-
-    end_idx = min(start_idx + duration, len(g))
-
-    g.loc[g.index[start_idx:end_idx], "x_meas"] = np.nan
-    g.loc[g.index[start_idx:end_idx], "y_meas"] = np.nan
-
-    return g
+    return np.degrees(
+        np.arctan2(x, y + 1e-9)
+    )
 
 
-def interpolate_measurements(g):
+def compute_occlusion_probability(
+    target_pos,
+    other_positions
+):
 
-    g = g.copy()
+    tx, ty = target_pos
 
-    g["x_meas"] = g["x_meas"].interpolate()
-    g["y_meas"] = g["y_meas"].interpolate()
+    target_angle = angle_deg(tx, ty)
+    target_dist = np.hypot(tx, ty)
 
-    return g
+    occlusion = 0.0
+
+    for ox, oy in other_positions:
+
+        other_angle = angle_deg(ox, oy)
+        other_dist = np.hypot(ox, oy)
+
+        angle_diff = abs(
+            target_angle - other_angle
+        )
+
+        if (
+            angle_diff < 4
+            and other_dist < target_dist
+        ):
+
+            overlap = np.exp(
+                -angle_diff / 2
+            )
+
+            depth = np.exp(
+                -(target_dist - other_dist)/8
+            )
+
+            occlusion += overlap * depth
+
+    return float(
+        np.clip(occlusion, 0, 1)
+    )
 
 
-def covariance_growth(covs):
-
-    vals = []
-
-    for P in covs:
-        vals.append(np.sqrt(np.trace(P)))
-
-    return np.array(vals)
-
-
-def run_occlusion_prediction(
+def run_occlusion_aware_prediction(
     womd_dir="data/womd/validation",
     max_files=2,
-    max_scenarios=120
+    max_scenarios=80,
+    horizon_s=5.0,
+    dt=0.1
 ):
 
     df = load_womd_directory(
@@ -67,112 +84,163 @@ def run_occlusion_prediction(
         max_scenarios=max_scenarios
     )
 
+    history_steps = int(1.0 / dt)
+    future_steps = int(horizon_s / dt)
+
     rows = []
 
-    plt.figure(figsize=(10,8))
+    inflation_curves = []
 
-    plotted = 0
+    for sid, sdf in df.groupby(
+        "scenario_id"
+    ):
 
-    for (sid, aid), g in df.groupby(["scenario_id","agent_id"]):
+        tracks = {}
 
-        if len(g) < 35:
-            continue
+        for aid, g in sdf.groupby("agent_id"):
 
-        g = normalize_track(g)
+            g = normalize_track(g)
 
-        g["x_meas"] = g["x"]
-        g["y_meas"] = g["y"]
+            if len(g) < history_steps + future_steps:
+                continue
 
-        occ = simulate_occlusion(
-            g,
-            start_idx=10,
-            duration=10
-        )
+            seg = g.iloc[
+                :history_steps + future_steps
+            ]
 
-        interp = interpolate_measurements(occ)
+            if np.max(np.diff(seg.t.values)) > 0.25:
+                continue
 
-        hist = interp.iloc[:15]
-        fut = interp.iloc[15:35]
+            hist = seg.iloc[:history_steps]
+            fut = seg.iloc[history_steps:]
 
-        future_times = fut.t.values
-        gt = fut[["x","y"]].values
+            try:
 
-        try:
-            pred, covs = kalman_predict(
-                hist,
-                future_times
-            )
-        except Exception:
-            continue
+                pred, covs = kalman_predict(
+                    hist,
+                    fut.t.values
+                )
 
-        uncertainty = covariance_growth(covs)
+            except Exception:
+                continue
 
-        drift = np.mean(
-            np.linalg.norm(pred - gt, axis=1)
-        )
+            tracks[aid] = {
+                "pred": pred,
+                "covs": covs,
+                "type": g.object_type.iloc[0]
+            }
 
-        beam_width = 2 + 1.5 * uncertainty
+        aids = list(tracks.keys())
 
-        rows.append({
-            "scenario_id": sid,
-            "agent_id": int(aid),
-            "object_type": g.object_type.iloc[0],
-            "prediction_drift_m": float(drift),
-            "max_uncertainty": float(np.max(uncertainty)),
-            "mean_beam_width_deg": float(np.mean(beam_width)),
-        })
+        for aid in aids:
 
-        if plotted < 20:
+            target = tracks[aid]
 
-            plt.plot(
-                gt[:,0],
-                gt[:,1],
-                "k-",
-                alpha=0.4
-            )
+            pred = target["pred"]
+            covs = target["covs"]
 
-            plt.plot(
-                pred[:,0],
-                pred[:,1],
-                "--",
-                alpha=0.8
-            )
+            inflation = []
 
-            occ_seg = occ.iloc[10:20]
+            for t in range(len(pred)):
 
-            plt.scatter(
-                occ_seg.x,
-                occ_seg.y,
-                marker="x",
-                s=45,
-                alpha=0.8
-            )
+                others = []
 
-            plotted += 1
+                for oid in aids:
 
-    plt.axis("equal")
-    plt.xlabel("relative x (m)")
-    plt.ylabel("relative y (m)")
-    plt.title(
-        "Occlusion-aware WOMD trajectory prediction"
-    )
+                    if oid == aid:
+                        continue
 
-    fig_path = savefig(
-        "part_b_16_occlusion_aware_prediction.png"
-    )
+                    others.append(
+                        tracks[oid]["pred"][t]
+                    )
+
+                occ = compute_occlusion_probability(
+                    pred[t],
+                    others
+                )
+
+                base_unc = np.sqrt(
+                    np.trace(covs[t][:2,:2])
+                )
+
+                inflated_unc = (
+                    base_unc
+                    * (1 + 2*occ)
+                )
+
+                inflation.append(
+                    inflated_unc / (base_unc + 1e-9)
+                )
+
+            inflation = np.array(inflation)
+
+            inflation_curves.append(inflation)
+
+            rows.append({
+                "scenario_id": sid,
+                "agent_id": int(aid),
+                "object_type": target["type"],
+                "mean_uncertainty_inflation":
+                    float(np.mean(inflation)),
+                "max_uncertainty_inflation":
+                    float(np.max(inflation)),
+                "mean_occlusion_probability":
+                    float(np.mean(inflation-1)/2),
+            })
 
     out = pd.DataFrame(rows)
 
+    plt.figure(figsize=(9,5))
+
+    for curve in inflation_curves[:12]:
+
+        plt.plot(
+            curve,
+            alpha=0.5
+        )
+
+    plt.xlabel("Prediction step")
+    plt.ylabel("Uncertainty inflation")
+
+    plt.title(
+        "Occlusion-aware uncertainty inflation"
+    )
+
+    fig1 = savefig(
+        "part_b_48_occlusion_uncertainty.png"
+    )
+
+    plt.figure(figsize=(7,5))
+
+    plt.hist(
+        out.mean_occlusion_probability,
+        bins=25
+    )
+
+    plt.xlabel("Mean occlusion probability")
+    plt.ylabel("Count")
+
+    plt.title(
+        "VRU occlusion probability distribution"
+    )
+
+    fig2 = savefig(
+        "part_b_49_occlusion_distribution.png"
+    )
+
     metrics = {
-        "num_agents": int(len(out)),
-        "mean_prediction_drift_m":
-            float(out.prediction_drift_m.mean()),
-        "mean_max_uncertainty":
-            float(out.max_uncertainty.mean()),
-        "mean_beam_width_deg":
-            float(out.mean_beam_width_deg.mean()),
-        "figure":
-            str(fig_path),
+        "num_agents":
+            int(len(out)),
+        "mean_occlusion_probability":
+            float(out.mean_occlusion_probability.mean()),
+        "max_occlusion_probability":
+            float(out.mean_occlusion_probability.max()),
+        "mean_uncertainty_inflation":
+            float(out.mean_uncertainty_inflation.mean()),
+        "figures": {
+            "uncertainty_inflation": str(fig1),
+            "occlusion_distribution": str(fig2),
+        }
     }
 
     Path("outputs").mkdir(exist_ok=True)
@@ -193,6 +261,6 @@ def run_occlusion_prediction(
 
 if __name__ == "__main__":
 
-    metrics = run_occlusion_prediction()
+    metrics = run_occlusion_aware_prediction()
 
     print(json.dumps(metrics, indent=2))

@@ -1,0 +1,12 @@
+{
+  "num_agents": 157,
+  "grid_resolution": 250,
+  "max_heatmap_value": 1.0,
+  "mean_heatmap_value": 0.023488153628897144,
+  "high_risk_threshold": 0.6,
+  "high_risk_area_m2": 20.52,
+  "figures": {
+    "risk_heatmap": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_42_risk_heatmap.png",
+    "risk_hotspots": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_43_risk_hotspots.png"
+  }
+}

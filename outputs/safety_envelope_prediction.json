@@ -1,0 +1,10 @@
+{
+  "num_agents": 157,
+  "mean_coverage_rate": 1.0,
+  "mean_final_envelope_area": 509.6629566066956,
+  "max_final_envelope_area": 510.5054238471461,
+  "figures": {
+    "envelope_example": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_35_safety_envelope_example.png",
+    "coverage_distribution": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_36_safety_envelope_coverage.png"
+  }
+}

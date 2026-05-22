@@ -1,0 +1,110 @@
+{
+  "num_scenarios": 69,
+  "num_agents": 209,
+  "top_scenarios": [
+    {
+      "scenario_id": "f07589a399547917",
+      "num_agents": 1,
+      "difficulty_score": 0.8862863937081656,
+      "mean_best_fde": 10.408261978682685,
+      "mean_heading_change_deg": 84.90723770602371,
+      "crossing_rate": 1.0,
+      "cyclist_fraction": 1.0,
+      "mean_uncertainty": 9.010376766856469
+    },
+    {
+      "scenario_id": "4a013cdb54b260bf",
+      "num_agents": 1,
+      "difficulty_score": 0.7613543307049206,
+      "mean_best_fde": 11.577634512395914,
+      "mean_heading_change_deg": 61.72598716761588,
+      "crossing_rate": 0.0,
+      "cyclist_fraction": 1.0,
+      "mean_uncertainty": 9.01037676685647
+    },
+    {
+      "scenario_id": "a067a3788873f5be",
+      "num_agents": 3,
+      "difficulty_score": 0.7195942324125074,
+      "mean_best_fde": 5.0680489444686545,
+      "mean_heading_change_deg": 173.3265195293676,
+      "crossing_rate": 0.0,
+      "cyclist_fraction": 0.3333333333333333,
+      "mean_uncertainty": 9.009550232320331
+    },
+    {
+      "scenario_id": "2d84b1ab55ab81d3",
+      "num_agents": 3,
+      "difficulty_score": 0.6924130585235521,
+      "mean_best_fde": 5.33350368092085,
+      "mean_heading_change_deg": 575.9696006182301,
+      "crossing_rate": 0.3333333333333333,
+      "cyclist_fraction": 0.3333333333333333,
+      "mean_uncertainty": 9.01186455959754
+    },
+    {
+      "scenario_id": "a149237c0d9c27ea",
+      "num_agents": 1,
+      "difficulty_score": 0.6678168357687492,
+      "mean_best_fde": 5.587325326779947,
+      "mean_heading_change_deg": 24.597075289464073,
+      "crossing_rate": 0.0,
+      "cyclist_fraction": 1.0,
+      "mean_uncertainty": 9.01186455959754
+    },
+    {
+      "scenario_id": "2db20518212cdfeb",
+      "num_agents": 1,
+      "difficulty_score": 0.6159846298216796,
+      "mean_best_fde": 6.077095212741092,
+      "mean_heading_change_deg": 73.62125289995154,
+      "crossing_rate": 0.0,
+      "cyclist_fraction": 0.0,
+      "mean_uncertainty": 9.011864559597539
+    },
+    {
+      "scenario_id": "1870b2208fe4ade9",
+      "num_agents": 6,
+      "difficulty_score": 0.6142609930779781,
+      "mean_best_fde": 2.2373502286278555,
+      "mean_heading_change_deg": 443.61531276936154,
+      "crossing_rate": 0.0,
+      "cyclist_fraction": 0.3333333333333333,
+      "mean_uncertainty": 9.010376766856465
+    },
+    {
+      "scenario_id": "750f17fb3ac9783d",
+      "num_agents": 2,
+      "difficulty_score": 0.6024596605771565,
+      "mean_best_fde": 4.071031713822594,
+      "mean_heading_change_deg": 24.103394127527082,
+      "crossing_rate": 0.0,
+      "cyclist_fraction": 0.5,
+      "mean_uncertainty": 9.01186455959754
+    },
+    {
+      "scenario_id": "a4956b27f127a67c",
+      "num_agents": 1,
+      "difficulty_score": 0.6000679980209412,
+      "mean_best_fde": 2.9990314835563447,
+      "mean_heading_change_deg": 23.697902195137463,
+      "crossing_rate": 0.0,
+      "cyclist_fraction": 1.0,
+      "mean_uncertainty": 9.010872694579719
+    },
+    {
+      "scenario_id": "140117c81b4ef9fb",
+      "num_agents": 4,
+      "difficulty_score": 0.5804445802907015,
+      "mean_best_fde": 0.9282001794490595,
+      "mean_heading_change_deg": 397.3225833112565,
+      "crossing_rate": 0.0,
+      "cyclist_fraction": 0.75,
+      "mean_uncertainty": 9.01037676685647
+    }
+  ],
+  "figures": {
+    "ranking": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_29_scenario_difficulty_ranking.png",
+    "error_vs_difficulty": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_30_error_vs_difficulty.png"
+  }
+}

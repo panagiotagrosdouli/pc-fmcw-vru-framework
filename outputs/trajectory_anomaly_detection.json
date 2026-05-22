@@ -1,0 +1,131 @@
+{
+  "num_agents": 209,
+  "mean_anomaly_score": 0.4755686749321158,
+  "max_anomaly_score": 0.9926810181424103,
+  "top_anomalies": [
+    {
+      "scenario_id": "3a79684106fe2fdf",
+      "agent_id": 1515,
+      "object_type": "pedestrian",
+      "prediction_residual_fde": 6.591581881080042,
+      "anomaly_score": 0.9926810181424103,
+      "max_speed": 6.475036953635149,
+      "mean_speed": 0.9535285274624413,
+      "max_accel": 31.900675747245305,
+      "max_heading_rate": 24.955691801698407,
+      "max_jerk": 266.3522824908107
+    },
+    {
+      "scenario_id": "a2fd6176c7695739",
+      "agent_id": 3799,
+      "object_type": "pedestrian",
+      "prediction_residual_fde": 4.719091045056485,
+      "anomaly_score": 0.9752466257671946,
+      "max_speed": 6.175490177637504,
+      "mean_speed": 0.6175673830509005,
+      "max_accel": 29.012192020742898,
+      "max_heading_rate": 20.84346169143949,
+      "max_jerk": 141.55009482950692
+    },
+    {
+      "scenario_id": "2d84b1ab55ab81d3",
+      "agent_id": 1551,
+      "object_type": "pedestrian",
+      "prediction_residual_fde": 4.213384824346077,
+      "anomaly_score": 0.9658935498287906,
+      "max_speed": 5.798179457604609,
+      "mean_speed": 0.39687165618738707,
+      "max_accel": 54.126822340080864,
+      "max_heading_rate": 22.858080275797168,
+      "max_jerk": 379.07926251656363
+    },
+    {
+      "scenario_id": "27384099b57a800b",
+      "agent_id": 5492,
+      "object_type": "pedestrian",
+      "prediction_residual_fde": 3.058764023223245,
+      "anomaly_score": 0.9309077652650999,
+      "max_speed": 7.8934410471194445,
+      "mean_speed": 0.33062032772912064,
+      "max_accel": 32.625132912983325,
+      "max_heading_rate": 26.066412791177815,
+      "max_jerk": 131.89107980337477
+    },
+    {
+      "scenario_id": "abc362bb96b25c1c",
+      "agent_id": 4147,
+      "object_type": "pedestrian",
+      "prediction_residual_fde": 2.8464180527131204,
+      "anomaly_score": 0.9217645035611837,
+      "max_speed": 5.60855793647262,
+      "mean_speed": 0.7384322202617636,
+      "max_accel": 27.640142648611373,
+      "max_heading_rate": 22.054043894024716,
+      "max_jerk": 182.2606738254749
+    },
+    {
+      "scenario_id": "b5b52effcbc11899",
+      "agent_id": 1156,
+      "object_type": "pedestrian",
+      "prediction_residual_fde": 2.794252225010549,
+      "anomaly_score": 0.9190637774146306,
+      "max_speed": 3.801405358506289,
+      "mean_speed": 0.837411847369531,
+      "max_accel": 18.443384391134217,
+      "max_heading_rate": 28.436533752680354,
+      "max_jerk": 182.89861309884117
+    },
+    {
+      "scenario_id": "7fcb65089a2bb672",
+      "agent_id": 2629,
+      "object_type": "pedestrian",
+      "prediction_residual_fde": 6.947520224334426,
+      "anomaly_score": 0.8943021103359865,
+      "max_speed": 1.6952925298542978,
+      "mean_speed": 0.7560677735370394,
+      "max_accel": 4.371198959385935,
+      "max_heading_rate": 12.215415910987616,
+      "max_jerk": 26.807964754559443
+    },
+    {
+      "scenario_id": "3b523aceb232aa6f",
+      "agent_id": 6994,
+      "object_type": "cyclist",
+      "prediction_residual_fde": 1.966783560948323,
+      "anomaly_score": 0.8707483311486929,
+      "max_speed": 3.081609128949918,
+      "mean_speed": 0.8936388165928298,
+      "max_accel": 14.099713256080614,
+      "max_heading_rate": 12.65782579354392,
+      "max_jerk": 138.21833444080607
+    },
+    {
+      "scenario_id": "c92f5e81941151a4",
+      "agent_id": 136,
+      "object_type": "pedestrian",
+      "prediction_residual_fde": 5.270642222976668,
+      "anomaly_score": 0.8449947000466889,
+      "max_speed": 1.653764988268332,
+      "mean_speed": 1.1181453679223823,
+      "max_accel": 3.266161672760087,
+      "max_heading_rate": 28.20616212678404,
+      "max_jerk": 24.729043981845706
+    },
+    {
+      "scenario_id": "1e41e4f90a5cae0a",
+      "agent_id": 566,
+      "object_type": "cyclist",
+      "prediction_residual_fde": 3.775855233584244,
+      "anomaly_score": 0.8419360776941339,
+      "max_speed": 3.499839523587412,
+      "mean_speed": 2.422977000325547,
+      "max_accel": 13.936196397680112,
+      "max_heading_rate": 1.8825418630018598,
+      "max_jerk": 67.5882979547203
+    }
+  ],
+  "figures": {
+    "distribution": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_50_anomaly_distribution.png",
+    "heading_relation": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_51_heading_anomaly_relation.png"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "num_agents": 162,
+  "mean_fixed5_fde": 1.2558447996352238,
+  "mean_adaptive_fde": 1.012326771659043,
+  "mean_fde_reduction": 0.243518027976181,
+  "summary_by_motion_class": [
+    {
+      "motion_class": "high_dynamics",
+      "num_agents": 15,
+      "mean_horizon": 3.0,
+      "fixed5_fde": 3.1479456147585334,
+      "adaptive_fde": 1.5167651842967698,
+      "fde_reduction": 1.6311804304617639
+    },
+    {
+      "motion_class": "smooth",
+      "num_agents": 98,
+      "mean_horizon": 5.0,
+      "fixed5_fde": 1.346285964810057,
+      "adaptive_fde": 1.346285964810057,
+      "fde_reduction": 0.0
+    },
+    {
+      "motion_class": "stationary",
+      "num_agents": 49,
+      "mean_horizon": 2.0,
+      "fixed5_fde": 0.4957479340437285,
+      "adaptive_fde": 0.1899884631209762,
+      "fde_reduction": 0.30575947092275224
+    }
+  ],
+  "figures": {
+    "fde_comparison": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_31_adaptive_horizon_fde.png",
+    "horizon_vs_error": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_32_horizon_vs_error.png"
+  }
+}

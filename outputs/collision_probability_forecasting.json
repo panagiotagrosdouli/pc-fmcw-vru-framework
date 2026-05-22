@@ -1,0 +1,103 @@
+{
+  "num_agents": 157,
+  "mean_max_collision_probability": 0.8919767493787247,
+  "highest_collision_probability": 0.9999983423012407,
+  "num_possible_collisions": 146,
+  "top_collision_cases": [
+    {
+      "scenario_id": "66d2f8859f26c401",
+      "agent_id": 1629,
+      "object_type": "pedestrian",
+      "max_collision_probability": 0.9999983423012407,
+      "mean_collision_probability": 0.9999960517974188,
+      "time_to_collision_s": 0.0,
+      "final_probability": 0.9999953076978552
+    },
+    {
+      "scenario_id": "c92f5e81941151a4",
+      "agent_id": 96,
+      "object_type": "pedestrian",
+      "max_collision_probability": 0.9999977974797886,
+      "mean_collision_probability": 0.9999975054463248,
+      "time_to_collision_s": 0.0,
+      "final_probability": 0.9999975245476105
+    },
+    {
+      "scenario_id": "a991619cfc4f2216",
+      "agent_id": 1956,
+      "object_type": "pedestrian",
+      "max_collision_probability": 0.9999963747014734,
+      "mean_collision_probability": 0.9999903259030515,
+      "time_to_collision_s": 0.0,
+      "final_probability": 0.9999883845799964
+    },
+    {
+      "scenario_id": "f21c5ea7c094490b",
+      "agent_id": 1102,
+      "object_type": "pedestrian",
+      "max_collision_probability": 0.9999928777601971,
+      "mean_collision_probability": 0.999992220145928,
+      "time_to_collision_s": 0.0,
+      "final_probability": 0.9999928777601971
+    },
+    {
+      "scenario_id": "a2fd6176c7695739",
+      "agent_id": 3698,
+      "object_type": "pedestrian",
+      "max_collision_probability": 0.9999926268532733,
+      "mean_collision_probability": 0.9999909344202745,
+      "time_to_collision_s": 0.0,
+      "final_probability": 0.9999926268532733
+    },
+    {
+      "scenario_id": "ee5e5fe91cd6c6e7",
+      "agent_id": 3054,
+      "object_type": "pedestrian",
+      "max_collision_probability": 0.9999892288095108,
+      "mean_collision_probability": 0.9997544832644414,
+      "time_to_collision_s": 0.0,
+      "final_probability": 0.9996335585703097
+    },
+    {
+      "scenario_id": "f21c5ea7c094490b",
+      "agent_id": 1101,
+      "object_type": "pedestrian",
+      "max_collision_probability": 0.9999886507371536,
+      "mean_collision_probability": 0.9999871660257178,
+      "time_to_collision_s": 0.0,
+      "final_probability": 0.9999882533087938
+    },
+    {
+      "scenario_id": "66d2f8859f26c401",
+      "agent_id": 1630,
+      "object_type": "pedestrian",
+      "max_collision_probability": 0.9999876459010508,
+      "mean_collision_probability": 0.9999743074288965,
+      "time_to_collision_s": 0.0,
+      "final_probability": 0.9999719104202167
+    },
+    {
+      "scenario_id": "140117c81b4ef9fb",
+      "agent_id": 4621,
+      "object_type": "cyclist",
+      "max_collision_probability": 0.9999863872339911,
+      "mean_collision_probability": 0.9999798999662346,
+      "time_to_collision_s": 0.0,
+      "final_probability": 0.9999799921841219
+    },
+    {
+      "scenario_id": "ae92386e0686d4d6",
+      "agent_id": 2739,
+      "object_type": "pedestrian",
+      "max_collision_probability": 0.9999855836365222,
+      "mean_collision_probability": 0.9999782938739357,
+      "time_to_collision_s": 0.0,
+      "final_probability": 0.9999777628464886
+    }
+  ],
+  "figures": {
+    "forecast_example": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_37_collision_probability_example.png",
+    "distribution": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_38_collision_probability_distribution.png",
+    "ttc_relation": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_39_ttc_vs_collision_probability.png"
+  }
+}

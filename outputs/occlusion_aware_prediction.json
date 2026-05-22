@@ -1,7 +1,10 @@
 {
-  "num_agents": 324,
-  "mean_prediction_drift_m": 0.2537982966816465,
-  "mean_max_uncertainty": 3.050207835883451,
-  "mean_beam_width_deg": 4.653747021303083,
-  "figure": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_16_occlusion_aware_prediction.png"
+  "num_agents": 113,
+  "mean_occlusion_probability": 0.4904048564297628,
+  "max_occlusion_probability": 0.9999999994550482,
+  "mean_uncertainty_inflation": 1.9808097128595255,
+  "figures": {
+    "uncertainty_inflation": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_48_occlusion_uncertainty.png",
+    "occlusion_distribution": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_49_occlusion_distribution.png"
+  }
 }

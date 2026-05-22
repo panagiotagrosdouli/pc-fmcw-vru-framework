@@ -1,0 +1,10 @@
+{
+  "num_agents": 131,
+  "mean_beam_width_deg": 9.404066709747216,
+  "max_beam_width_deg": 15.316617993620506,
+  "mean_collision_risk": 3.9524529574683383e-66,
+  "figures": {
+    "beam_width_evolution": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_46_dynamic_beam_width.png",
+    "risk_relation": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_47_risk_vs_beam_width.png"
+  }
+}
