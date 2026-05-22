@@ -1,0 +1,11 @@
+{
+  "num_agents": 209,
+  "cv_fraction": 0.5502392344497608,
+  "kf_fraction": 0.44976076555023925,
+  "mean_ade": 0.6740512764929198,
+  "mean_fde": 1.495613108453453,
+  "mean_beam_timing_error_s": 0.013333333333333334,
+  "mean_proactive_gain_s": 0.0009569377990430622,
+  "mean_final_uncertainty": 5.151184740711031,
+  "figure": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_14_hybrid_predictive_scheduler.png"
+}

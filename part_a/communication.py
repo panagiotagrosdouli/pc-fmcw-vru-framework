@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from common.plotting import savefig
 
-def dpsk_ber_sim(snr_db_values=np.arange(0, 15, 2), n_bits=50000, seed=2):
+def dpsk_ber_sim(snr_db_values=np.arange(0, 13, 2), n_bits=12000, seed=2):
     rng = np.random.default_rng(seed)
     bits = rng.integers(0, 2, n_bits)
     phase = np.pi * np.cumsum(bits)

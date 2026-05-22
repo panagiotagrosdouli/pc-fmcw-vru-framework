@@ -1,0 +1,81 @@
+{
+  "dataset": {
+    "max_files": 2,
+    "max_scenarios": 150,
+    "num_scenarios": 105,
+    "num_agents": 657,
+    "object_counts": {
+      "pedestrian": 31675,
+      "cyclist": 2417
+    }
+  },
+  "horizon_ablation": [
+    {
+      "horizon_s": 1.0,
+      "num_agents": 465,
+      "cv_ade": 0.1094623408020156,
+      "cv_fde": 0.20264498467763972,
+      "kf_ade": 0.15540816867646678,
+      "kf_fde": 0.2634680943915424,
+      "uncertainty": 1.8693908226907046
+    },
+    {
+      "horizon_s": 2.0,
+      "num_agents": 373,
+      "cv_ade": 0.21859481182178805,
+      "cv_fde": 0.4639271585796648,
+      "kf_ade": 0.2846584991676937,
+      "kf_fde": 0.5552257950302721,
+      "uncertainty": 3.40966079468635
+    },
+    {
+      "horizon_s": 3.0,
+      "num_agents": 299,
+      "cv_ade": 0.36058136176551076,
+      "cv_fde": 0.7997669113176876,
+      "kf_ade": 0.4352340531300798,
+      "kf_fde": 0.9000909439389796,
+      "uncertainty": 5.119384375469849
+    },
+    {
+      "horizon_s": 5.0,
+      "num_agents": 209,
+      "cv_ade": 0.6750509087054805,
+      "cv_fde": 1.5217815880807428,
+      "kf_ade": 0.7571349999136875,
+      "kf_fde": 1.6060392228507798,
+      "uncertainty": 9.007411367536497
+    },
+    {
+      "horizon_s": 8.0,
+      "num_agents": 127,
+      "cv_ade": 1.1387099727744119,
+      "cv_fde": 2.58455951864863,
+      "kf_ade": 1.244818511379173,
+      "kf_fde": 2.68448392038758,
+      "uncertainty": 15.874248917428197
+    }
+  ],
+  "crossing_prediction": {
+    "num_agents": 209,
+    "gt_crossing_rate": 0.009569377990430622,
+    "cv_crossing_accuracy": 0.9904306220095693,
+    "kf_crossing_accuracy": 0.9904306220095693
+  },
+  "time_to_beam_conflict": {
+    "num_agents": 209,
+    "num_conflict_agents": 15,
+    "mean_ttc_error_s": 0.013333333333333334,
+    "median_ttc_error_s": 0.0,
+    "figure": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_13_time_to_beam_conflict.png"
+  },
+  "maneuver_detection": {
+    "num_agents": 209,
+    "maneuver_rate": 0.84688995215311,
+    "mean_heading_change_deg": 342.2409903990636
+  },
+  "figures": {
+    "horizon_ade": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_11_horizon_ablation_ade.png",
+    "uncertainty_growth": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_12_uncertainty_growth.png"
+  }
+}

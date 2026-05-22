@@ -1,0 +1,10 @@
+object_type,intention,count
+cyclist,crossing,1
+cyclist,stationary,4
+cyclist,straight,16
+cyclist,turning,10
+pedestrian,crossing,5
+pedestrian,erratic,5
+pedestrian,stationary,158
+pedestrian,straight,87
+pedestrian,turning,193

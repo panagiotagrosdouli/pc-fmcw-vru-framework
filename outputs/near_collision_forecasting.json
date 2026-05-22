@@ -1,0 +1,99 @@
+{
+  "num_agents": 209,
+  "mean_minimum_distance_m": 1.0284298285610285,
+  "mean_time_to_nearest_approach_s": 0.003827751196172249,
+  "max_collision_risk": 0.999100309879791,
+  "top_risk_agents": [
+    {
+      "scenario_id": "7efb8ffc5f5cb1b4",
+      "agent_id": 1217,
+      "object_type": "pedestrian",
+      "minimum_future_distance_m": 0.004500475421391129,
+      "time_to_nearest_approach_s": 0.0,
+      "collision_risk": 0.999100309879791,
+      "final_uncertainty": 9.01037676685647
+    },
+    {
+      "scenario_id": "66d2f8859f26c401",
+      "agent_id": 1629,
+      "object_type": "pedestrian",
+      "minimum_future_distance_m": 0.00475451284131198,
+      "time_to_nearest_approach_s": 0.0,
+      "collision_risk": 0.9990495493963154,
+      "final_uncertainty": 9.010376766856469
+    },
+    {
+      "scenario_id": "c92f5e81941151a4",
+      "agent_id": 96,
+      "object_type": "pedestrian",
+      "minimum_future_distance_m": 0.005493564303378912,
+      "time_to_nearest_approach_s": 0.0,
+      "collision_risk": 0.9989018905033046,
+      "final_uncertainty": 9.010376766856472
+    },
+    {
+      "scenario_id": "a991619cfc4f2216",
+      "agent_id": 1956,
+      "object_type": "pedestrian",
+      "minimum_future_distance_m": 0.007031166334045543,
+      "time_to_nearest_approach_s": 0.0,
+      "collision_risk": 0.998594755015885,
+      "final_uncertainty": 9.01186455959754
+    },
+    {
+      "scenario_id": "7efb8ffc5f5cb1b4",
+      "agent_id": 1218,
+      "object_type": "pedestrian",
+      "minimum_future_distance_m": 0.008938667002464859,
+      "time_to_nearest_approach_s": 0.0,
+      "collision_risk": 0.998213863643025,
+      "final_uncertainty": 9.01037676685647
+    },
+    {
+      "scenario_id": "f21c5ea7c094490b",
+      "agent_id": 1102,
+      "object_type": "pedestrian",
+      "minimum_future_distance_m": 0.010243897659425348,
+      "time_to_nearest_approach_s": 0.0,
+      "collision_risk": 0.9979533177843428,
+      "final_uncertainty": 9.01186455959754
+    },
+    {
+      "scenario_id": "a2fd6176c7695739",
+      "agent_id": 3698,
+      "object_type": "pedestrian",
+      "minimum_future_distance_m": 0.012028425575264061,
+      "time_to_nearest_approach_s": 0.0,
+      "collision_risk": 0.9975972062263666,
+      "final_uncertainty": 9.005913560281655
+    },
+    {
+      "scenario_id": "ee5e5fe91cd6c6e7",
+      "agent_id": 3054,
+      "object_type": "pedestrian",
+      "minimum_future_distance_m": 0.012117925123069459,
+      "time_to_nearest_approach_s": 0.0,
+      "collision_risk": 0.9975793494864142,
+      "final_uncertainty": 8.96872985800573
+    },
+    {
+      "scenario_id": "f21c5ea7c094490b",
+      "agent_id": 1101,
+      "object_type": "pedestrian",
+      "minimum_future_distance_m": 0.012440507514433515,
+      "time_to_nearest_approach_s": 0.0,
+      "collision_risk": 0.9975149912560932,
+      "final_uncertainty": 9.01037676685647
+    },
+    {
+      "scenario_id": "66d2f8859f26c401",
+      "agent_id": 1630,
+      "object_type": "pedestrian",
+      "minimum_future_distance_m": 0.01297955842235024,
+      "time_to_nearest_approach_s": 0.0,
+      "collision_risk": 0.9974074547806214,
+      "final_uncertainty": 9.010376766856469
+    }
+  ],
+  "figure": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_18_near_collision_forecasting.png"
+}

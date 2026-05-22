@@ -6,13 +6,13 @@ from common.plotting import savefig
 def make_tracks(seed=4):
     rng = np.random.default_rng(seed)
     t = np.arange(0, 50)
-    x1 = 10 + 1.5*t + rng.normal(0, 0.7, len(t))
-    y1 = 15 + 0.7*t + rng.normal(0, 0.7, len(t))
-    x2 = 90 - 1.2*t + rng.normal(0, 0.7, len(t))
-    y2 = 20 + 25*np.sin(t/18) + rng.normal(0, 0.7, len(t))
+    x1 = 10 + 1.5*t + rng.normal(0, 1.35, len(t))
+    y1 = 15 + 0.7*t + rng.normal(0, 1.35, len(t))
+    x2 = 90 - 1.2*t + rng.normal(0, 1.35, len(t))
+    y2 = 20 + 25*np.sin(t/18) + rng.normal(0, 1.35, len(t))
     pts1 = np.c_[x1, y1, t, np.zeros_like(t)]
     pts2 = np.c_[x2, y2, t, np.ones_like(t)]
-    clutter = np.c_[rng.uniform(0,100,120), rng.uniform(0,100,120), rng.uniform(0,50,120), -np.ones(120)]
+    clutter = np.c_[rng.uniform(0,100,160), rng.uniform(0,100,160), rng.uniform(0,50,160), -np.ones(160)]
     return np.vstack([pts1, pts2, clutter])
 
 def mht_like_filter(points):

@@ -1,0 +1,51 @@
+{
+  "num_agents": 479,
+  "intentions": [
+    {
+      "object_type": "cyclist",
+      "intention": "crossing",
+      "count": 1
+    },
+    {
+      "object_type": "cyclist",
+      "intention": "stationary",
+      "count": 4
+    },
+    {
+      "object_type": "cyclist",
+      "intention": "straight",
+      "count": 16
+    },
+    {
+      "object_type": "cyclist",
+      "intention": "turning",
+      "count": 10
+    },
+    {
+      "object_type": "pedestrian",
+      "intention": "crossing",
+      "count": 5
+    },
+    {
+      "object_type": "pedestrian",
+      "intention": "erratic",
+      "count": 5
+    },
+    {
+      "object_type": "pedestrian",
+      "intention": "stationary",
+      "count": 158
+    },
+    {
+      "object_type": "pedestrian",
+      "intention": "straight",
+      "count": 87
+    },
+    {
+      "object_type": "pedestrian",
+      "intention": "turning",
+      "count": 193
+    }
+  ],
+  "figure": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_15_intention_prediction.png"
+}

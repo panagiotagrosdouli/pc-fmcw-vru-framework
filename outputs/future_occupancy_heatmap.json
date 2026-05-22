@@ -1,0 +1,7 @@
+{
+  "agents_used": 157,
+  "horizon_s": 5.0,
+  "max_occupancy": 1.0,
+  "mean_occupancy": 0.025538839870202633,
+  "figure": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_17_future_occupancy_heatmap.png"
+}

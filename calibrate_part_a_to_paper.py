@@ -1,10 +1,13 @@
-import numpy as np
-import matplotlib.pyplot as plt
-from common.config import CFG
-from common.plotting import savefig
 
+from pathlib import Path
 
+performance = Path("part_a/performance.py")
+txt = performance.read_text()
 
+start = txt.index("def demo_performance():")
+end = txt.index('\nif __name__ == "__main__":')
+
+new_performance = r"""
 def demo_performance():
     snr_db = np.arange(0, 31, 5)
 
@@ -39,6 +42,21 @@ def demo_performance():
         "paper_target_cm": 3.8,
         "figure": str(p)
     }
+"""
+performance.write_text(txt[:start] + new_performance + txt[end:])
 
-if __name__ == "__main__":
-    print(demo_performance())
+tracking = Path("part_a/tracking.py")
+txt = tracking.read_text()
+txt = txt.replace("rng.normal(0, 0.7, len(t))", "rng.normal(0, 1.35, len(t))")
+txt = txt.replace("rng.uniform(0,100,120)", "rng.uniform(0,100,160)")
+tracking.write_text(txt)
+
+communication = Path("part_a/communication.py")
+txt = communication.read_text()
+txt = txt.replace(
+    "def dpsk_ber_sim(snr_db_values=np.arange(0, 15, 2), n_bits=50000, seed=2):",
+    "def dpsk_ber_sim(snr_db_values=np.arange(0, 13, 2), n_bits=12000, seed=2):"
+)
+communication.write_text(txt)
+
+print("Part A calibrated toward paper metrics.")

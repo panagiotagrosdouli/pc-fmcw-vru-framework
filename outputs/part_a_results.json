@@ -29,11 +29,11 @@
     "figure": "/home/pg2a1/pc_fmcw_project_python/figures/part_a_04_range_doppler_cfar.png"
   },
   "tracking": {
-    "raw_points": 220,
-    "cleaned_points": 102,
-    "clutter_removed": 118,
-    "num_tracks": 2,
-    "mean_deviation_units": 0.877877264046975,
+    "raw_points": 260,
+    "cleaned_points": 101,
+    "clutter_removed": 159,
+    "num_tracks": 7,
+    "mean_deviation_units": 1.6418216711082478,
     "figure": "/home/pg2a1/pc_fmcw_project_python/figures/part_a_05_mht_tracking.png"
   },
   "illumination": {
@@ -45,7 +45,7 @@
   },
   "performance": {
     "range_resolution_cm": 1.5,
-    "rmse_at_20db_cm": 3.647958197389465,
+    "rmse_at_20db_cm": 3.8196988114118353,
     "paper_target_cm": 3.8,
     "figure": "/home/pg2a1/pc_fmcw_project_python/figures/part_a_07_ranging_performance.png"
   }

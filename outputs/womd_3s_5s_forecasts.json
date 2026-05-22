@@ -1,0 +1,20 @@
+{
+  "3s": {
+    "horizon_s": 3.0,
+    "num_agents": 299,
+    "cv_ade": 0.3605813617655107,
+    "cv_fde": 0.7997669113176876,
+    "kf_ade": 0.4352340531300798,
+    "kf_fde": 0.9000909439389796,
+    "figure": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_10_womd_forecast_3s.png"
+  },
+  "5s": {
+    "horizon_s": 5.0,
+    "num_agents": 209,
+    "cv_ade": 0.6750509087054806,
+    "cv_fde": 1.5217815880807428,
+    "kf_ade": 0.7571349999136874,
+    "kf_fde": 1.60603922285078,
+    "figure": "/home/pg2a1/pc_fmcw_project_python/figures/part_b_10_womd_forecast_5s.png"
+  }
+}
